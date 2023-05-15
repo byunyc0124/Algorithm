@@ -15,7 +15,6 @@ public class Main {
 		k = Integer.parseInt(st.nextToken()); // 동생이 있는 위치
 		pos = new int[200001]; // 위치
 		pos[n] = 1;
-		time = Integer.MAX_VALUE;
 		find();
 		System.out.println(time);
 	}
@@ -30,8 +29,8 @@ public class Main {
 			t = info.time;
 			
 			if(x == k) {
-				time = Math.min(time, t);
-				continue;
+				time = t;
+				break;
 			}
 			
 			if(2*x < 200000 && pos[2*x] != 1) {
