@@ -29,8 +29,8 @@ public class Main {
 
     private static void change() {
         Queue<Info> q = new ArrayDeque<>();
-        Set<Integer>[] visited = new Set[k+1];
-        for(int i=0; i<k+1; i++){
+        Set<Integer>[] visited = new Set[k];
+        for(int i=0; i<k; i++){
             visited[i] = new HashSet<>();
         }
         q.add(new Info(n, 0));
